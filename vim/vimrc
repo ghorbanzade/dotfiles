@@ -1,4 +1,4 @@
-set nocompatible						" use vim settings, rather then vi settings
+set nocompatible               " use vim settings, rather then vi settings
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " let g:solarized_termcolors=256
@@ -9,29 +9,34 @@ set nowritebackup
 set noswapfile
 
 set numberwidth=4
+set number
 set relativenumber
 
 set wildmenu
 
-set laststatus=2						" always display the status line
+set laststatus=2                " always display the status line
 set showmatch
 set ignorecase smartcase
 set hlsearch
-set incsearch							" do incremental searching
+set incsearch                   " do incremental searching
 "set smartindent
 "set smarttab
-"set autoindent							" always set autoindenting on
+"set autoindent                 " always set autoindenting on
 "set tabstop=4
 "set softtabstop=4
 "set shiftwidth=4
 set encoding=utf-8
 set autoread
-set history=50							" keep 50 lines of command line history
-set showcmd								" display incomplete commands
+set history=50                  " keep 50 lines of command line history
+set showcmd                     " display incomplete commands
 
+" ctrl-n should toggle nerd-tree pane
+map <C-n> :NERDTreeToggle<CR>   " shortcut to open nerdtree
 
-map <C-n> :NERDTreeToggle<CR>	" shortcut to open nerdtree
 " close vim when only window left open is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-filetype plugin on		" required for nerd commenter plugin
+filetype plugin on              " required for nerd commenter plugin
+
+:command W w                    " make save command case-insensitive
+:command Wq wq                  " make save and exit command case-insensitive
