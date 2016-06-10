@@ -1,39 +1,58 @@
-set nocompatible               " use vim settings, rather then vi settings
+" use vim settings rather than vi settings
+set nocompatible
+
+" use pathogen for managing vim modules
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+" allow syntax highlighting
 syntax enable
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
-"set background=dark
-colorscheme evening
 
+" disable generation of backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile
 
+" set width of line numbering to four characters
 set numberwidth=4
-set number
+
+" set line numbers relative to currunt line
 set relativenumber
 
+" enable command auto completion
 set wildmenu
+set wildmode=list:longest,full
 
-set laststatus=2                " always display the status line
-set showmatch
-set ignorecase smartcase
+" always display the status line
+set laststatus=2
+
+" enable smart-case-sensitivity searching
+set ignorecase
+set smartcase
+
+" highlight all search results
 set hlsearch
-set incsearch                   " do incremental searching
-"set smartindent
-"set smarttab
-"set autoindent                 " always set autoindenting on
-"set tabstop=4
-"set softtabstop=4
-"set shiftwidth=4
+
+" show the next match while entering a search query
+set incsearch
+
+" set default encoding to utf-8
 set encoding=utf-8
+
+" read file again if modified by another editor
 set autoread
-set history=50                  " keep 50 lines of command line history
-set showcmd                     " display incomplete commands
+
+" keep 50 lines of command line history
+set history=50
+
+" display incomplete commands
+set showcmd
+
+" support expected backspace functionality in insert mode
 set backspace=indent,eol,start
+
+" set vim-airline module theme
+let g:airline_theme='papercolor'
 
 " ctrl-n should toggle nerd-tree pane
 map <C-n> :NERDTreeToggle<CR>   " shortcut to open nerdtree
@@ -41,10 +60,29 @@ map <C-n> :NERDTreeToggle<CR>   " shortcut to open nerdtree
 " close vim when only window left open is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-filetype plugin on              " required for nerd commenter plugin
+" required for nerd commenter plugin
+filetype plugin on
 
-:command Q q                    " make quit command case-insensitive
-:command W w                    " make save command case-insensitive
-:command Wq wq                  " make save and exit command case-insensitive
+" make quit command case-insensitive
+:command Q q
 
-let g:airline_theme='papercolor'
+" make save command case-insensitive
+:command W w
+
+" make save and exit command case-insensitive
+:command Wq wq
+
+" enable this on ubuntu, disable for osx
+"colorscheme evening
+
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+"set background=dark
+
+"set smartindent
+"set smarttab
+" always set autoindenting on
+"set autoindent
+"set tabstop=4
+"set softtabstop=4
+"set shiftwidth=4
