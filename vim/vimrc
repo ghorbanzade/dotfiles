@@ -73,7 +73,7 @@ filetype plugin on
 :command Wq wq
 
 " enable this on ubuntu, disable for osx
-"colorscheme evening
+colorscheme evening
 
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
@@ -83,6 +83,7 @@ filetype plugin on
 "set smarttab
 " always set autoindenting on
 "set autoindent
-"set tabstop=4
+set tabstop=2
+set expandtab
 "set softtabstop=4
 "set shiftwidth=4

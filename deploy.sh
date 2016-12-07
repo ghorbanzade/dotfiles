@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SRC_DIR="~/my/dot-files"
-DST_DIR="test"
+SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DST_DIR="/home/pejman"
 
 mkdir -p ${DST_DIR}
 
