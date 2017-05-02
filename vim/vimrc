@@ -18,6 +18,7 @@ set numberwidth=4
 
 " set line numbers relative to currunt line
 set relativenumber
+set number
 
 " enable command auto completion
 set wildmenu
@@ -51,9 +52,6 @@ set showcmd
 " support expected backspace functionality in insert mode
 set backspace=indent,eol,start
 
-" set vim-airline module theme
-let g:airline_theme='papercolor'
-
 " ctrl-n should toggle nerd-tree pane
 map <C-n> :NERDTreeToggle<CR>   " shortcut to open nerdtree
 
@@ -72,9 +70,6 @@ filetype plugin on
 " make save and exit command case-insensitive
 :command Wq wq
 
-" enable this on ubuntu, disable for osx
-colorscheme evening
-
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 "set background=dark
@@ -87,3 +82,14 @@ set tabstop=2
 set expandtab
 "set softtabstop=4
 "set shiftwidth=4
+
+"
+" only on ubuntu
+" comment on osx
+"
+
+" enable this on ubuntu, disable for osx
+colorscheme evening
+
+" set vim-airline module theme
+let g:airline_theme='papercolor'

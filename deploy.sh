@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-DST_DIR="/home/pejman"
+DST_DIR="/home/`whoami`"
 
 mkdir -p ${DST_DIR}
 
