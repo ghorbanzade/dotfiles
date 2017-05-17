@@ -85,11 +85,11 @@ set expandtab
 
 "
 " only on ubuntu
-" comment on osx
+" uncomment on ubuntu
 "
 
 " enable this on ubuntu, disable for osx
-colorscheme evening
+" colorscheme evening
 
 " set vim-airline module theme
-let g:airline_theme='papercolor'
+" let g:airline_theme='papercolor'

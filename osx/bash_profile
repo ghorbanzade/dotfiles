@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PS1="\u@\h:\w$ "
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
