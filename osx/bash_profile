@@ -1,7 +1,11 @@
 #!/bin/bash
 
+CLICOLOR=1
 PS1="\u@\h:\w$ "
+TERM="xterm-color"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+alias ls="ls -G"
