@@ -3,6 +3,7 @@
 CLICOLOR=1
 PS1="\u@\h:\w$ "
 TERM="xterm-color"
+GPG_TTY=$(tty)
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
