@@ -28,6 +28,11 @@ if [[ ! -f ${DST_DIR}/.tmux.conf ]]; then
     echo "source-file ${DST_DIR}/.tmux/tmux.conf" > ${DST_DIR}/.tmux.conf
 fi
 
+# deploy git configurations
+if [[ ! -L ${DST_DIR}/.gitconfig ]]; then
+    ln -s ${SRC_DIR}/git/gitconfig ${DST_DIR}/.gitconfig
+fi
+
 # bash profile
 if [[ `uname` == 'Darwin' ]]; then
     if [[ ! -L ${DST_DIR}/.bash_profile ]]; then
