@@ -93,3 +93,5 @@ set expandtab
 
 " set vim-airline module theme
 " let g:airline_theme='papercolor'
+
+let g:typescript_indent_disable=1
