@@ -52,6 +52,9 @@ set showcmd
 " support expected backspace functionality in insert mode
 set backspace=indent,eol,start
 
+" show 80 char line
+set colorcolumn=80
+
 " ctrl-n should toggle nerd-tree pane
 map <C-n> :NERDTreeToggle<CR>   " shortcut to open nerdtree
 
