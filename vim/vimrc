@@ -73,27 +73,17 @@ filetype plugin on
 " make save and exit command case-insensitive
 :command Wq wq
 
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
-"set background=dark
-
-"set smartindent
-"set smarttab
-" always set autoindenting on
-"set autoindent
+" by default, set tabstop to two chars
 set tabstop=2
+
+" by default, use spaces instead of tabs
 set expandtab
-"set softtabstop=4
-"set shiftwidth=4
 
-"
 " only on ubuntu
-" uncomment on ubuntu
-"
-
 " enable this on ubuntu, disable for osx
 " colorscheme evening
 
+" only on ubuntu
 " set vim-airline module theme
 " let g:airline_theme='papercolor'
 
