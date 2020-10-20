@@ -1,16 +1,15 @@
-[color]
-	status = auto
-[color "status"]
-	added = green
-	changed = yellow
-	untracked = yellow
 [user]
-	email = pejman@ghorbanzade.com
-	name = Pejman Ghorbanzade
-	signingkey = D797E83BD44B8EBE
+      email = pejman@ghorbanzade.com
+      name = Pejman Ghorbanzade
+      signingkey = D797E83BD44B8EBE
 [alias]
-	lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+      lg = log --oneline
+[core]
+      excludesfile = ~/.gitignore
 [commit]
-	gpgsign = true
+      gpgsign = true
+[diff]
+      compactionHeuristic = true
+      algorithm = patience
 [gpg]
-	program = gpg
+      program = gpg

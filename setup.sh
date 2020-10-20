@@ -24,13 +24,22 @@ if [[ ! -L "${DST_DIR}/.tmux" ]]; then
     ln -s "${SRC_DIR}/tmux" "${DST_DIR}/.tmux"
 fi
 
-if [[ ! -f ${DST_DIR}/.tmux.conf ]]; then
+if [[ ! -f "${DST_DIR}/.tmux.conf" ]]; then
     echo "source-file ${DST_DIR}/.tmux/tmux.conf" > "${DST_DIR}/.tmux.conf"
+fi
+
+# deploy editorconfig configuration
+if [[ ! -L "${DST_DIR}/.editorconfig" ]]; then
+    ln -s "${SRC_DIR}/editorconfig/editorconfig" "${DST_DIR}/.editorconfig"
 fi
 
 # deploy git configurations
 if [[ ! -L "${DST_DIR}/.gitconfig" ]]; then
     ln -s "${SRC_DIR}/git/gitconfig" "${DST_DIR}/.gitconfig"
+fi
+
+if [[ ! -L "${DST_DIR}/.gitignore" ]]; then
+    ln -s "${SRC_DIR}/git/gitignore" "${DST_DIR}/.gitignore"
 fi
 
 # bash profile

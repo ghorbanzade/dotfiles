@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-CLICOLOR=1
-PS1="\u@\h:\w$ "
-TERM="xterm-color"
+export CLICOLOR=1
+export PS1="\u@\h:\w$ "
+export TERM="screen-256color"
 export LANG="en_US.UTF-8"
 export GPG_TTY=$(tty)
+export EDITOR="$(which vim)"
+
+alias ls="ls -G"
+alias grep="grep --color"
+alias dc="docker-compose"
+alias vi="vim"
 
 if hash "brew" 2>/dev/null; then
     if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
@@ -12,8 +18,7 @@ if hash "brew" 2>/dev/null; then
     fi
 fi
 
-alias ls="ls -G"
-alias dc="docker-compose"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/local/opt/python/libexec/bin"
+export PATH="$PATH:$HOME/.cargo/bin"

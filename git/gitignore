@@ -1,0 +1,24 @@
+# Global .gitignore
+
+# OS X file clutter
+
+.DS_Store
+
+# python
+
+*.pyc
+
+# Node.js
+
+node_modules/
+
+# Java
+
+*.class
+*.jar
+*.ear
+*.war
+
+# vim files
+
+*.swp
